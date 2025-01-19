@@ -13,8 +13,9 @@ resource "aws_subnet" "subnet1"{
 
 vpc_id= aws_vpc.main.id
 
-cidr_block =var.subnet1
+cidr_block ="10.0.1.0/24"
 }
+
 resource "aws_instance" "example"{
     ami = var.ami_id
     instance_type = var.instance_type

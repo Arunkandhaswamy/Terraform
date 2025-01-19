@@ -4,9 +4,7 @@ variable "cidr" {
 }
 
 
-variable "subnet1"   {
-  cidr_block= "10.0.1.0/24"
-  }
+
 
 variable "instance_type" {
   default = "t2.micro"
