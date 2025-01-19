@@ -13,13 +13,13 @@ resource "aws_s3_bucket" "test_bucket" {
 }
  
 resource "aws_mangodb_table" "test_table" {
-  name = 'test_table'
-  billing_mode = 'Pay_per_request'
-  hash_key = 'Lockid'
+  name = "test_table"
+  billing_mode = "Pay_per_request"
+  hash_key = "Lockid"
 
   attribute {
-    name = 'Lockid'
-    type = 'S'
+    name = "Lockid"
+    type = "S"
   }
 } 
  
