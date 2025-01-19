@@ -1,10 +1,10 @@
-/*terraform {
+terraform {
   backend "s3" {
-     bucket= "test bucket"
+     bucket= "arun-demo-test-bucket-1"
      region = "us-west-2"
      key = "terraform.tfstate"
-    aws_mangodb_table = "test_table"
+    aws_dynamodb_table = "test_table"
   }
 
 
-}*/
+}
