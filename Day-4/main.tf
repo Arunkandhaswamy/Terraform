@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "arun-demo-test-bucket-1" {
-  bucket = "arun-demo-test-bucket-1"
+  bucket = "arun-demo-test-bucket-2"
   acl    = "private"
 }
 
