@@ -7,12 +7,12 @@ resource "aws_instance" "example" {
   instance_type = var.my_instance_type
 }
 
-resource "s3" "example" {
+resource "aws_s3_bucket" "example" {
   bucket = "my-tf-test-bucket"
   acl    = "private"
 }
 
-resource "aws_dynambodb_table" "example" {
+resource "aws_dynamodb_table" "example" {
   name           = "my-table"
   hash_key       = "LockID"
 
