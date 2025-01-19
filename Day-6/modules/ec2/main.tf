@@ -19,5 +19,5 @@ cidr_block ="10.0.1.0/24"
 resource "aws_instance" "example"{
     ami = var.ami_id
     instance_type = var.instance_type
-    sudnet_id = aws_subnet.subnet1.id
+    subnet = aws_subnet.subnet1.id
     }
