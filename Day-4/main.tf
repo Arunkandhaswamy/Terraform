@@ -1,5 +1,13 @@
+resource "aws-ec2-instance" "arun-demo-test-instance-1" {
+  ami = var.ami_id
+  instance_type = var.my_instance_type
+  
+}
+
+
+
 resource "aws_s3_bucket" "arun-demo-test-bucket-1" {
-  bucket = "arun-demo-test-bucket-2"
+  bucket = "arun-demo-test-bucket-1"
   acl    = "private"
 }
 
