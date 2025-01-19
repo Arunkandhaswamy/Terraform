@@ -7,7 +7,7 @@ resource "aws_instance" "example" {
   instance_type = var.instance-type
 
   tags = {
-    Name = "old-terraform"
+    Name = "can-terraform"
   }
 }
 
