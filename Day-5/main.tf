@@ -34,13 +34,13 @@ resource "aws_route_table" "my_route_table" {
 }
 
 resource "aws_route_table_association" "my_subnet_association" {
-  subnet_id = "aws_subnet.my_subnet.id"
-  route_table_id = "aws_route_table.my_route_table.id"
+  subnet_id = aws_subnet.my_subnet.id
+  route_table_id = aws_route_table.my_route_table.id
 }
 
 resource "aws_security_group" "my_sg" {
 name      = "web"
-vpc_id    = "aws_vpc.my_vpc.id"
+vpc_id    = aws_vpc.my_vpc.id
 
 ingress {
     description = "Allow HTTP from VPC"
@@ -73,10 +73,10 @@ egress {
 resource "aws_instance" "ec2_arun" {
     ami                    = "ami-00c257e12d6828491"  # Replace with a valid AMI ID
     instance_type          = "t2.micro"  # Replace with your desired instance type
-    key_name               = "aws_key_pair.my_key.key_name" 
-    subnet_id              = "aws_subnet.my_subnet.id"
+    key_name               = aws_key_pair.my_key.key_name 
+    subnet_id              = aws_subnet.my_subnet.id
     vpc_security_group_ids = [aws_security_group.my_sg.id]
-}
+
 
   connection {
     type        = "ssh"
@@ -100,3 +100,4 @@ provisioner "file" {
         "sudo python3 app.py &",
       ]
   }
+}
