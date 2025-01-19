@@ -18,7 +18,7 @@ resource "aws_subnet" "my_subnet" {
 
 resource "aws_key_pair" "my_key" {
   key_name = "mykey"
-  public_key = file(".ssh/id_rsa.pub")
+  public_key = file("~/home/arun_k/.ssh/id_rsa.pub")
 }
 
 resource "aws_internet_gateway" "my_igw" {
@@ -81,7 +81,7 @@ resource "aws_instance" "ec2_arun" {
   connection {
     type        = "ssh"
     user        = "ubuntu"
-    private_key = file("~/.ssh/id_rsa")
+    private_key = file("~/home/arun_k/.ssh/id_rsa")
     host        = self.public_ip
   }
 
