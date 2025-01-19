@@ -2,7 +2,7 @@ provider "aws" {
   region = "us-west-2"
 }
 
-resource "aws-ec2-instance" "arun-demo-test-instance-1" {
+resource "aws-instance" "arun-demo-test-instance-1" {
   ami = var.ami_id
   instance_type = var.my_instance_type
   
