@@ -12,7 +12,7 @@ resource "aws_s3_bucket" "test_bucket" {
   acl = "private"
 }
  
-resource "aws_mangodb_table" "test_table" {
+resource "aws_dynamodb_table" "test_table" {
   name = "test_table"
   billing_mode = "Pay_per_request"
   hash_key = "Lockid"
