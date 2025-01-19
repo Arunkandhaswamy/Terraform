@@ -7,8 +7,8 @@ resource "aws_instance" "example" {
   instance_type = "var.instance_type"
 }
 
-resource "aws_s3_bucket" "test_bucket" {
-  bucket = "test_bucket"
+resource "aws_s3_bucket" "Arun-test-bucket" {
+  bucket = "Arun-test-bucket"
   acl = "private"
 }
  
