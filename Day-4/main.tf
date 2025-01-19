@@ -8,7 +8,7 @@ resource "aws_instance" "example" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "my-tf-test-bucket"
+  bucket = "my-tf-arun-test-bucket-1"
   acl    = "private"
 }
 
