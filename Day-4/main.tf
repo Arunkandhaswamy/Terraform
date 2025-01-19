@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_instance" "example" {
   ami           = var.ami_id
-  instance_type = var.my_instance_type
+  instance_type = var.instance-type
 }
 
 resource "aws_s3_bucket" "example" {
