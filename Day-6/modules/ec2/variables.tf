@@ -1,15 +1,11 @@
 variable "cidr" {   
-  type        = string
-  default     = "10.0.0.0/16"  
+  type        = string 
 }
 
-
-
-
 variable "instance_type" {
-  default = "t2.micro"
+  description = "The type of instance to start"
   } 
 
 variable "ami_id" { 
-  default = "ami-00c257e12d6828491"
+description = "The AMI ID to use for the instance"
   }     
