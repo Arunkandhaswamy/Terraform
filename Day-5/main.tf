@@ -71,8 +71,8 @@ egress {
 }
 
 resource "aws_instance" "ec2_arun" {
-    ami                    = "ami-00c257e12d6828491"  # Replace with a valid AMI ID
-    instance_type          = "t2.micro"  # Replace with your desired instance type
+    ami                    = "ami-00c257e12d6828491" # Replace with a valid AMI ID
+    instance_type          = "t2.micro" # Replace with your desired instance type
     key_name               = aws_key_pair.my_key.key_name 
     subnet_id              = aws_subnet.my_subnet.id
     vpc_security_group_ids = [aws_security_group.my_sg.id]
