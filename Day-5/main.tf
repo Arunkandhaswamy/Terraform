@@ -40,7 +40,7 @@ resource "aws_route_table_association" "my_subnet_association" {
 
 resource "aws_security_group" "my_sg" {
 name      = "web"
-vpc_id    = aws_vpc.my_vpc.id
+vpc_id = "${aws_vpc.my_vpc.id}"
 
 ingress {
     description = "Allow HTTP from VPC"
@@ -55,7 +55,7 @@ ingress {
   to_port = 22
   protocol = "tcp"
   cidr_blocks = ["0.0.0.0/0"]
-
+}
 
 egress {
     description = "Allow all traffic to VPC"
